@@ -1,20 +1,17 @@
-import java.util.TreeSet;
-
 public class Main {
     public static void main(String[] args) {
-        TreeSet<String> treeSet = new TreeSet<>();
+        TreeSet<Integer, String> treeSet = new TreeSet<>();
 
-        treeSet.add("Hello");
-        treeSet.add(",");
-        treeSet.add("new");
-        treeSet.add("World");
+        treeSet.add(1, "Петя");
+        treeSet.add(20, "Вася");
+        treeSet.add(4, "Катя");
+        treeSet.add(5, "Миша");
+        treeSet.add(10, "Коля");
 
+        System.out.println(treeSet.contains(10));
 
-        System.out.println(treeSet.contains("Hello"));
-        System.out.println(treeSet.contains("World"));
+        treeSet.remove(10);
 
-        treeSet.remove("World");
-
-        System.out.println(treeSet.contains("World"));
+        System.out.println(treeSet.contains(10));
     }
 }
